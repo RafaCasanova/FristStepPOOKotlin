@@ -1,6 +1,6 @@
-class Conta(var titular: String ) {
+class Conta(var titular: String) {
 
-
+    
     private var saldo = 0.0
 
     fun depositar(valor: Double) {

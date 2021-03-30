@@ -19,7 +19,16 @@ fun testeDeComportamento() {
     val rafael = Funcionario("Rafael", 123456, 1500.0)
 
     println(rafael.bonificacao())
-    val seila = Gerente("Polvo", 4500.0, 12345, 1234)
+    val molusco = Gerente("Polvo", 4500.0, 12345, 1234)
 
-    println(seila.autenticacao(124))
+    println(molusco.autenticacao(124))
+
+    val calcularFuncionario = CalcularBonificacao()
+
+    calcularFuncionario.registra(rafael)
+    calcularFuncionario.registra(molusco)
+    println(calcularFuncionario.totalBonificacao)
+
+
+
 }
