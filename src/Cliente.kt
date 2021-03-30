@@ -1,5 +1,3 @@
-abstract class Cliente(){
-    var nome = ""
-
+abstract class Cliente(val nome: String, val cpf: Int, val idade: String, val sexo: String) {
 
 }

@@ -1,8 +1,7 @@
-class Conta {
-    var titular = ""
-    val numeroDaConta = 0
-    private var saldo = 0.0
+class Conta(var titular: String ) {
 
+
+    private var saldo = 0.0
 
     fun depositar(valor: Double) {
         if (valor > 0) {
@@ -11,10 +10,11 @@ class Conta {
         } else (println("Não foi possivel efetuar a operação"))
     }
 
+
     fun sacar(valor: Double) {
         if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor
-        }else{
+        } else {
             println("Não foi possivel efetuar a operação")
         }
     }
@@ -26,7 +26,10 @@ class Conta {
         }
     }
 
-    fun getSaldo():Double{
+    fun getSaldo(): Double {
         return this.saldo
+
     }
+
+
 }
