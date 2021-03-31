@@ -5,13 +5,13 @@ fun main() {
 }
 
 fun testeDeComportamento() {
-    val conta = ContaCorrente("Rafael")
+    val conta = ContaCorrente("Rafael",111)
     println(conta.titular)
     conta.depositar(200.0)
     conta.sacar(-100.0)
     println(conta.saldo)
 
-    val conta1 = ContaPoupanca("Polvo")
+    val conta1 = ContaPoupanca("Polvo",12345678)
     conta.transferir(conta1,100.0)
     println(conta.saldo)
     println(conta1.saldo)
@@ -21,7 +21,7 @@ fun testeDeComportamento() {
     println(siri.bonificacao())
     val molusco = Gerente("Polvo", 4500.0, 12345, 1234)
 
-    println(molusco.autenticacao(124))
+    println(molusco.autentica(124))
 
     val calcularFuncionario = CalcularBonificacao()
 
@@ -29,8 +29,8 @@ fun testeDeComportamento() {
     calcularFuncionario.registra(molusco)
     println(calcularFuncionario.totalBonificacao)
 
-    val araia = ContaPoupanca("Araia")
-    val lacraia = ContaCorrente("Lacraia")
+    val araia = ContaPoupanca("Araia",112)
+    val lacraia = ContaCorrente("Lacraia",231)
 
     araia.depositar(1000.0)
     lacraia.depositar(1000.0)
@@ -44,3 +44,6 @@ fun testeDeComportamento() {
 
 
 }
+
+
+
