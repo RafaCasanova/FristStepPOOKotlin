@@ -1,9 +1,10 @@
-class Conta(var titular: String) {
+open class Conta(var titular: String) {
 
-    
-    private var saldo = 0.0
 
-    fun depositar(valor: Double) {
+    var saldo = 0.0
+        private set
+
+    open fun depositar(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
             println("${this.titular},deposito realizado no valor de R$$valor ")
@@ -11,7 +12,7 @@ class Conta(var titular: String) {
     }
 
 
-    fun sacar(valor: Double) {
+    open fun sacar(valor: Double) {
         if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor
         } else {
@@ -19,16 +20,11 @@ class Conta(var titular: String) {
         }
     }
 
-    fun transferir(destino: Conta, valor: Double) {
+    open fun transferir(destino: Conta, valor: Double) {
         if (this.saldo >= valor) {
             this.sacar(valor)
             destino.depositar(valor)
         }
-    }
-
-    fun getSaldo(): Double {
-        return this.saldo
-
     }
 
 
