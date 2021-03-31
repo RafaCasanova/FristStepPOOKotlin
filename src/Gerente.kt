@@ -2,7 +2,7 @@ class Gerente(
     nome: String,
     salario: Double,
     id: Int,
-    override val senha: Int
+    protected val senha: Int
 ) : Funcionario(
     nome = nome,
     salario = salario,
