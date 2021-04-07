@@ -1,3 +1,5 @@
+package modelo
+
 class CalcularBonificacao {
     var totalBonificacao:Double= 0.0
         private set

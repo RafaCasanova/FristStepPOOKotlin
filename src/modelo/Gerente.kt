@@ -1,3 +1,7 @@
+package modelo
+
+import Autenticavel
+
 class Gerente(
     nome: String,
     salario: Double,
@@ -7,7 +11,7 @@ class Gerente(
     nome = nome,
     salario = salario,
     id = id
-),Autenticavel {
+), Autenticavel {
 
     override fun bonificacao(): Double = salario * 0.2
 
