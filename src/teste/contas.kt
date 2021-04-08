@@ -1,9 +1,6 @@
 package teste
 
-import modelo.Cliente
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
-import modelo.totaldecontas
+import modelo.*
 
 fun testedecontas(){
 
@@ -35,5 +32,5 @@ fun testedecontas(){
 
     println(araia.saldo)
     println(lacraia.saldo)
-    println(totaldecontas)
+    println(Conta.total)
 }

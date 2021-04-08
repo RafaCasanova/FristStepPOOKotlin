@@ -9,5 +9,9 @@ class ContaCorrente(titular: Cliente, protected val senha: Int): Conta(titular =
         var valorTarifa = valor + 0.1
         super.sacar(valorTarifa)
     }
+
+    override fun toString(): String {
+        return "Titular da Conta ${this.titular.nome}"
+    }
 }
 

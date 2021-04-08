@@ -1,14 +1,20 @@
 package modelo
 
-var totaldecontas = 0
-    private set
+
 
 abstract class Conta(var titular: Cliente) {
-
-    init {
-        totaldecontas++
+    companion object Contador{
+        var total = 0
+            private set
+//        companion deixa a classe superior modificar seus atributos caso não esteja private
+//        fun incrementa(){
+//            total++
+//        }
     }
-
+    init {
+        total++
+//        Contador.incrementa() esta função so e preciso caso o objeto não esteja como companion
+    }
     var saldo = 0.0
         protected set
 
@@ -16,7 +22,7 @@ abstract class Conta(var titular: Cliente) {
     open fun depositar(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
-            println("${this.titular},deposito realizado no valor de R$$valor ")
+            println("${this.titular.nome},deposito realizado no valor de R$$valor ")
         } else (println("Não foi possivel efetuar a operação"))
     }
 
