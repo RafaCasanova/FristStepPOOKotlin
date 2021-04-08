@@ -1,7 +1,13 @@
 package modelo
 
-abstract class Conta(var titular: String) {
+var totaldecontas = 0
+    private set
 
+abstract class Conta(var titular: Cliente) {
+
+    init {
+        totaldecontas++
+    }
 
     var saldo = 0.0
         protected set

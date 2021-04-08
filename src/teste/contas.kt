@@ -1,21 +1,30 @@
 package teste
 
+import modelo.Cliente
 import modelo.ContaCorrente
 import modelo.ContaPoupanca
+import modelo.totaldecontas
 
 fun testedecontas(){
-    val conta = ContaCorrente("Rafael",111)
-    println(conta.titular)
+
+    val rafael = Cliente("Rafael",123456)
+    val conta = ContaCorrente(rafael,123)
+    println(conta.titular.nome)
     conta.depositar(200.0)
     conta.sacar(-100.0)
     println(conta.saldo)
 
-    val conta1 = ContaPoupanca("Polvo",12345678)
+    val polvo = Cliente("Polvo",12345678,)
+    val conta1 = ContaPoupanca(polvo,12345678)
     conta.transferir(conta1,100.0)
     println(conta.saldo)
     println(conta1.saldo)
-    val araia = ContaPoupanca("Araia",112)
-    val lacraia = ContaCorrente("Lacraia",231)
+
+
+    val araia = ContaPoupanca(Cliente("Araia",1111),1111)
+
+
+    val lacraia = ContaCorrente(Cliente("Lacraia",222),231)
 
     araia.depositar(1000.0)
     lacraia.depositar(1000.0)
@@ -26,4 +35,5 @@ fun testedecontas(){
 
     println(araia.saldo)
     println(lacraia.saldo)
+    println(totaldecontas)
 }
