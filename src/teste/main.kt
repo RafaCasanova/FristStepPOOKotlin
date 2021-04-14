@@ -4,7 +4,7 @@ import teste.*
 
 fun main() {
     println("is it work?")
-    testeDeComportamento()
+    //testeDeComportamento()
     testedecontas()
 
 }

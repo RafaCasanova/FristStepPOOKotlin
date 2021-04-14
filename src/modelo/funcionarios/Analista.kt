@@ -1,4 +1,6 @@
-package modelo
+package modelo.funcionarios
+
+import modelo.funcionarios.Funcionario
 
 class Analista(
     nome: String,

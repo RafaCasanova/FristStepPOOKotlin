@@ -1,5 +1,4 @@
-package modelo
-
+package modelo.bancos
 
 
 abstract class Conta(var titular: Cliente) {
@@ -15,14 +14,19 @@ abstract class Conta(var titular: Cliente) {
         total++
 //        Contador.incrementa() esta função so e preciso caso o objeto não esteja como companion
     }
-    var saldo = 0.0
+    var saldo: Double = 0.0
         protected set
+        get() {
+            val saldoString = field.toString()
+            return "%.2f".format(field).toDouble()
+        }
 
 
     open fun depositar(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
-            println("${this.titular.nome},deposito realizado no valor de R$$valor ")
+
+            println("${this.titular.nome},deposito realizado no valor de R$${this.saldo} ")
         } else (println("Não foi possivel efetuar a operação"))
     }
 

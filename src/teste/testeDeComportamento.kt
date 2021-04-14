@@ -1,8 +1,8 @@
 package teste
 
-import modelo.Analista
-import modelo.CalcularBonificacao
-import modelo.Gerente
+import modelo.funcionarios.Analista
+import modelo.funcionarios.CalcularBonificacao
+import modelo.funcionarios.Gerente
 
 fun testeDeComportamento(){
 

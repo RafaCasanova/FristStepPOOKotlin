@@ -1,6 +1,8 @@
-package modelo
+package modelo.bancos
 
 import Autenticavel
+import modelo.bancos.Cliente
+import modelo.bancos.Conta
 
 class ContaCorrente(titular: Cliente, protected val senha: Int): Conta(titular = titular), Autenticavel {
 

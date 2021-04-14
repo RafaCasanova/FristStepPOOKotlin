@@ -1,6 +1,9 @@
 package teste
 
-import modelo.*
+import modelo.bancos.Cliente
+import modelo.bancos.Conta
+import modelo.bancos.ContaCorrente
+import modelo.bancos.ContaPoupanca
 
 fun testedecontas(){
 

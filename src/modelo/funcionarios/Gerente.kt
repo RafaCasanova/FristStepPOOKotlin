@@ -1,6 +1,7 @@
-package modelo
+package modelo.funcionarios
 
 import Autenticavel
+import modelo.funcionarios.Funcionario
 
 class Gerente(
     nome: String,

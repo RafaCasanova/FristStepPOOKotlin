@@ -1,6 +1,8 @@
-package modelo
+package modelo.bancos
 
 import Autenticavel
+import modelo.bancos.Cliente
+import modelo.bancos.Conta
 
 class ContaPoupanca (titular: Cliente, protected val senha: Int): Conta(titular = titular), Autenticavel {
     override fun depositar(valor: Double) {
