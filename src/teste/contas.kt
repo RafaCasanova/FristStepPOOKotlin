@@ -33,7 +33,7 @@ fun testedecontas(){
     lacraia.sacar(100.0)
     lacraia.transferir(araia, 400.0)
 
-    println(araia.saldo)
-    println(lacraia.saldo)
+    println(araia.getSaldo())
+    println(lacraia.getSaldo())
     println(Conta.total)
 }

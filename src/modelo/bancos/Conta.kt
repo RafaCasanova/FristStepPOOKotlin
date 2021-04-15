@@ -1,6 +1,8 @@
 package modelo.bancos
 
 
+
+
 abstract class Conta(var titular: Cliente) {
     companion object Contador{
         var total = 0
@@ -14,19 +16,20 @@ abstract class Conta(var titular: Cliente) {
         total++
 //        Contador.incrementa() esta função so e preciso caso o objeto não esteja como companion
     }
-    var saldo: Double = 0.0
+    var saldo: Double = 0.00
         protected set
-        get() {
-            val saldoString = field.toString()
-            return "%.2f".format(field).toDouble()
-        }
-
+        //get() = "%.2f".format(field).toDouble() porem arredonda e nao devolve o numero com duas casas decimal
+        //poderia ser implementado o BigDecimal podem preferi fazer na mão com getSaldo
+    open fun getSaldo(): String{
+        val saldoString = String.format("%.2f",this.saldo)
+            return "${this.titular.nome} seu saldo atual e deR$$saldoString"
+    }
 
     open fun depositar(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
-
-            println("${this.titular.nome},deposito realizado no valor de R$${this.saldo} ")
+            val saldoString = String.format("%.2f",this.saldo)
+            println("${this.titular.nome},deposito realizado no valor de R$${saldoString} ")
         } else (println("Não foi possivel efetuar a operação"))
     }
 
